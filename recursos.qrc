@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Styles/Chatbee.qss</file>
+        <file>Styles/icono.ico</file>
+        <file>Styles/icono.PNG</file>
+        <file>Styles/Logo.PNG</file>
+        <file>Styles/suspended.txt</file>
+    </qresource>
+</RCC>

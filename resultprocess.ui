@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ResultProcess</class>
+ <widget class="QWidget" name="ResultProcess">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>235</width>
+    <height>315</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>235</width>
+    <height>315</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">font: 14pt &quot;Century Gothic&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(255, 200, 11);</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QFrame" name="frame">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLabel" name="idLB">
+        <property name="text">
+         <string>ID: </string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="tmLB">
+        <property name="text">
+         <string>Tiempo Maximo: </string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="opLB">
+        <property name="text">
+         <string>Operacion: </string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="resLB">
+        <property name="text">
+         <string>Resultado:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="llegadaLB">
+        <property name="text">
+         <string>T. Llegada: </string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="finalLB">
+        <property name="text">
+         <string>T. Finalizacion: </string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="retornoLB">
+        <property name="text">
+         <string>T. Retorno: </string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="respuestaLB">
+        <property name="text">
+         <string>T. Respuesta:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="esperaLB">
+        <property name="text">
+         <string>T. Espera:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="servicioLB">
+        <property name="text">
+         <string>T. Servicio: </string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
