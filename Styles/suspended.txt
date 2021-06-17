@@ -1,0 +1,1 @@
+Id / Memoria / Digito 1 / Operacion / Digito 2 / Tiempo Max / T. Transcurrido

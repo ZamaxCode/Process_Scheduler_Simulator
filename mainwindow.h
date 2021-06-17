@@ -82,5 +82,6 @@ private:
     void insertFrame(Proceso &p);
     void changeFrameState(const Proceso &p, const QString state);
     void writeSuspendedFile();
+
 };
 #endif // MAINWINDOW_H

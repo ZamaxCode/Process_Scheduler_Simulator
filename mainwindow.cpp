@@ -330,17 +330,15 @@ void MainWindow::startProcess()
 
                         if(frames<=contAvailableFrames)
                         {
-                            processList.push_back(suspendedList.first());
+                            blockedList.push_back(suspendedList.first());
                             suspendedList.removeFirst();
                             contAvailableFrames-=frames;
 
-                            insertFrame(processList.back());
+                            insertFrame(blockedList.back());
+
+                            changeFrameState(blockedList.back(), "Bloqueado");
 
                             printFrameTable();
-
-                            PendientProcess* pproc = new PendientProcess();
-                            pproc->setData(processList.back().getId(), processList.back().getTimeMax(), processList.back().getTt());
-                            ui->pendientProcessGL->addWidget(pproc);
 
                             writeSuspendedFile();
 
@@ -592,17 +590,15 @@ void MainWindow::startProcess()
 
                     if(frames<=contAvailableFrames)
                     {
-                        processList.push_back(suspendedList.first());
+                        blockedList.push_back(suspendedList.first());
                         suspendedList.removeFirst();
                         contAvailableFrames-=frames;
 
-                        insertFrame(processList.back());
+                        insertFrame(blockedList.back());
+
+                        changeFrameState(blockedList.back(), "Bloqueado");
 
                         printFrameTable();
-
-                        PendientProcess* pproc = new PendientProcess();
-                        pproc->setData(processList.back().getId(), processList.back().getTimeMax(), processList.back().getTt());
-                        ui->pendientProcessGL->addWidget(pproc);
 
                         writeSuspendedFile();
 
@@ -933,10 +929,16 @@ void MainWindow::writeSuspendedFile()
 
     suspendedFile.resize(0);
 
-    QByteArray dataFile;
+    QByteArray dataFile = "Id / Memoria / Digito 1 / Operacion / Digito 2 / Tiempo Max / T. Transcurrido\n";
 
     for (int i(0); i<suspendedList.size(); ++i)
-        dataFile += QString::number(suspendedList.at(i).getId()) + "," + QString::number(suspendedList.at(i).getMemory()) + "\n";
+        dataFile += QString::number(suspendedList.at(i).getId()) +
+                " / " + QString::number(suspendedList.at(i).getMemory()) +
+                " / " + QString::number(suspendedList.at(i).getDigit1()) +
+                " / " + suspendedList.at(i).getOperation() +
+                " / " + QString::number(suspendedList.at(i).getDigit2()) +
+                " / " + QString::number(suspendedList.at(i).getTt()) +
+                " / " + QString::number(suspendedList.at(i).getTimeMax()) + "\n";
 
     suspendedFile.write(dataFile);
     suspendedFile.close();
