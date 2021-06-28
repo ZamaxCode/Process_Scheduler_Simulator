@@ -338,8 +338,6 @@ void MainWindow::startProcess()
 
                             changeFrameState(blockedList.back(), "Bloqueado");
 
-                            printFrameTable();
-
                             writeSuspendedFile();
 
                             ui->contSuspendedLB->setText("Procesos Suspendidos: " + QString::number(suspendedList.size()));
@@ -597,8 +595,6 @@ void MainWindow::startProcess()
                         insertFrame(blockedList.back());
 
                         changeFrameState(blockedList.back(), "Bloqueado");
-
-                        printFrameTable();
 
                         writeSuspendedFile();
 
